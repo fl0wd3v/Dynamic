@@ -264,8 +264,8 @@ endif
 
 # wallet: shared between dynamicd and dynamic-qt, but only linked
 # when wallet enabled
-libdynamic_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(DYNAMIC_INCLUDES)
-libdynamic_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libdynamic_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(DYNAMIC_INCLUDES) -mavx2
+libdynamic_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -mavx2
 libdynamic_wallet_a_SOURCES = \
   activedynode.cpp \
   dynode.cpp \
